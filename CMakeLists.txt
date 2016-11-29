@@ -51,6 +51,36 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+set( SYSTEM_SRC
+
+)
+
+add_library(system OBJECT ${SYSTEM_SRC})
+
+set( FC_COMMON_SRC
+
+)
+
+add_library(fc_common OBJECT ${FC_COMMON_SRC})
+
+set( OSD_COMMON_SRC
+
+)
+
+add_library(osd_common OBJECT ${OSD_COMMON_SRC})
+
+set( HIGHEND_SRC
+
+)
+
+add_library(highend OBJECT ${HIGHEND_SRC})
+
+set( VCP_SRC
+
+)
+
+add_library(vcp OBJECT ${VCP_SRC})
+
 set( SOURCES
   main.c
 )
@@ -58,6 +88,7 @@ set( SOURCES
 set( LIB_SOURCES
 
 )
+
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LIB_SOURCES})
 
